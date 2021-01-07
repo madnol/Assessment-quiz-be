@@ -1,0 +1,222 @@
+[
+  {
+    "duration": 60,
+    "text": "This is the text of the first question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the second question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the third question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the fourth question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the fifth question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the sixth question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the seventh question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the eighth question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the ninth question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "duration": 60,
+    "text": "This is the text of the tenth question",
+    "answers": [
+      {
+        "text": "Text for the first answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the second answer",
+        "isCorrect": true
+      },
+      {
+        "text": "Text for the third answer",
+        "isCorrect": false
+      },
+      {
+        "text": "Text for the fourth answer",
+        "isCorrect": false
+      }
+    ]
+  }
+]
