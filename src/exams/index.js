@@ -12,14 +12,14 @@ examsRouter.get("/", async (req, res, next) => {
   res.send(allExams);
 });
 
-examsRouter.get("/:id", async (req, res, next) => {
+examsRouter.get("/:exid", async (req, res, next) => {
   const allExams = await getExams(examsJsonPath);
 
   console.log("GET ID");
-  const exam = allExams.find(exam => exam.id === req.params.id);
+  const exam = allExams.find(exam => exam.id === req.params.exid);
 
   console.log(exam);
-  res.send(allExams);
+  res.send(exam);
 });
 
 examsRouter.post("/start", async (req, res) => {
@@ -31,12 +31,15 @@ examsRouter.post("/start", async (req, res) => {
     //empty array for random questions
     const questionsArray = [];
 
+    //Exam duration variable
+    let examDuration = 0;
+
     //randomize questions
     try {
       const selectedQuestions = [];
 
       for (let i = 0; i < 5; i++) {
-        let questionIndex = Math.floor(Math.Random() * questionsDB.length);
+        let questionIndex = Math.floor(Math.random() * questionsDB.length);
         if (selectedQuestions.includes(questionIndex)) {
           i--;
         } else {
@@ -47,6 +50,8 @@ examsRouter.post("/start", async (req, res) => {
       //Get questions from random indexes above
       selectedQuestions.forEach(index => {
         questionsArray.push(questionsDB[index]);
+
+        examDuration += questionsDB[index].duration;
       });
     } catch (error) {
       console.log(error);
@@ -59,7 +64,7 @@ examsRouter.post("/start", async (req, res) => {
       Date: new Date(),
       isCompleted: false,
       totalDuration: 30,
-      questions: actualQuestions,
+      questions: questionsArray,
     });
 
     await writeExams(examsDB);
@@ -83,10 +88,31 @@ examsRouter.post("/:id/answer", async (req, res) => {
       examsDB[selectedExamIndex].questions[req.body.question].providedAnswer =
         req.body.answer;
       await writeExams(examsDB);
-      res.send("Answer recieved!");
+      res.send("Answer received!");
     } else {
-      res.send("Couldn't find this exam");
+      res.send("Exam not found!");
     }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+examsRouter.get("/:id", async (req, res) => {
+  try {
+    //Get exam database
+    const examsDB = await getExams();
+    const selectedExam = examsDB.find(exam => exam.id === req.params.id);
+
+    //calculate score
+    let score = 0;
+    selectedExam.questions.forEach(question => {
+      if (question.answer[question.providedAnswer].isCorrect === true) {
+        score += 1;
+      }
+    });
+    selectedExam.score = score;
+    selectedExam.isCompleted = true;
+    res.send(selectedExam);
   } catch (error) {
     console.log(error);
   }
