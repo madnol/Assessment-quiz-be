@@ -88,7 +88,7 @@ examsRouter.post("/:id/answer", async (req, res) => {
       examsDB[selectedExamIndex].questions[req.body.question].providedAnswer =
         req.body.answer;
       await writeExams(examsDB);
-      res.send("Answer received!");
+      res.send(examsDB);
     } else {
       res.send("Exam not found!");
     }
